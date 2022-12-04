@@ -1,9 +1,9 @@
-import { rename as fsRename } from 'fs/promises'
+import { rename as fsRename } from "fs/promises";
 import {getPath} from "../utils.js";
 import fs from "fs";
 
-const wrongFile = getPath(import.meta.url, '/files/wrongFilename.txt')
-const newFile = getPath(import.meta.url, '/files/properFilename.md')
+const wrongFile = getPath(import.meta.url, '/files/wrongFilename.txt');
+const newFile = getPath(import.meta.url, '/files/properFilename.md');
 
 const rename = async () => {
     try {
@@ -12,7 +12,7 @@ const rename = async () => {
         }
         await fsRename(wrongFile, newFile)
     } catch {
-        throw new Error('FS operation failed')
+        throw new Error('FS operation failed');
     }
 };
 
