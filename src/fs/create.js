@@ -1,5 +1,5 @@
-import fs from 'fs';
-import { getPath } from '../utils.js'
+import fs from "fs";
+import { getPath } from "../utils.js";
 
 const filePath = getPath(import.meta.url, '/files/fresh.txt');
 
