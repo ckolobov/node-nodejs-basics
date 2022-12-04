@@ -1,13 +1,7 @@
-import path from 'path';
 import fs from 'fs';
+import { getPath } from '../utils.js'
 
-import {fileURLToPath} from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-
-const __dirname = path.dirname(__filename);
-
-const filePath = `${__dirname}/files/fresh.txt`;
+const filePath = getPath(import.meta.url, '/files/fresh.txt');
 
 const create = async () => {
     if (fs.existsSync(filePath)) {
