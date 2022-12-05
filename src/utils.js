@@ -1,5 +1,5 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
+import path from "path";
+import { fileURLToPath } from "url";
 
 export function getPath(url, pathInDirectory) {
     const __filename = fileURLToPath(url);
